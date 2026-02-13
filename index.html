@@ -15,7 +15,7 @@
         body {
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-            overflow: hidden; /* Prevent scrolling when button moves */
+            overflow: hidden; 
             touch-action: manipulation;
         }
         
@@ -93,7 +93,7 @@
         </div>
     </div>
 
-    <!-- Success Message (Hidden initially) -->
+    <!-- Success Message -->
     <div id="success-message" class="hidden-content flex-col items-center justify-center text-center z-20 absolute inset-0 bg-white/90 p-6">
         <div class="text-8xl mb-6 animate-bounce">💑</div>
         <h1 class="text-4xl md:text-5xl text-red-500 romantic-font mb-4">Evviva!</h1>
@@ -113,8 +113,8 @@
         // Function to move the "No" button
         function moveButton() {
             // Get screen dimensions
-            const maxX = window.innerWidth - noBtn.offsetWidth - 20;
-            const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+            const maxX = window.innerWidth/2 - noBtn.offsetWidth - 20;
+            const maxY = window.innerHeight/2 - noBtn.offsetHeight - 20;
 
             const randomX = Math.random() * maxX;
             const randomY = Math.random() * maxY;
@@ -180,4 +180,5 @@
         });
     </script>
 </body>
+
 </html>
